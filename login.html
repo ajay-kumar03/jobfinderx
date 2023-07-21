@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<h1>JobFinderX</h1>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap dependencies -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Login Page</title>
+</head>
+<body class="text-center">
+	<div class="min-vh-150">
+	  <h1 class="text-dark">Login</h1>
+	    <div class="container bg-secondary justify-content-center align-items-center col-md-8 col-xl-4 pt-3 pb-3">
+		  <form id="loginForm" action="register.html" method="post">
+		  	<div class="form-group">
+	    		<div class="form-group">
+	    		  <label for="email">Email:</label><br>
+		    	  <input type="email" id="email" name="email" placeholder="name@example.com" required>
+	    		</div>
+	    		<div class="form-group">
+	    		  <label for="password">Password:</label><br>
+		    	  <input type="password" id="password" name="password" required>
+	    		</div>
+	    		<button type="submit" class="btn btn-dark">Login</button>
+	    	</div>
+		    
+		  </form>
+	</div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Check if the user is registered
+      // For simplicity, we'll assume the user is not registered (you can add your own logic here)
+      const isRegistered = false;
+
+      if (!isRegistered) {
+        const message = "Kindly register before you try to login.";
+        alert(message);
+        window.location.href = "register.html"; // Redirect to the register page
+      } else {
+        // Process the login form here if the user is registered
+        // You can add your own logic to authenticate the user
+        // For this example, we'll just display a welcome message
+        alert("Welcome back, " + email + "!");
+        // Redirect to the dashboard page or any other page after successful login
+        // Replace "dashboard.html" with the desired page URL
+        window.location.href = "dashboard.html";
+      }
+    });
+  </script>
+</body>
+</html>
